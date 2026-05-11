@@ -10,7 +10,7 @@ test.describe('DCP-2', () => {
     await page.getByRole('textbox', { name: /password/i }).fill(process.env.TEST_USER_PASSWORD!);
 
     // Submit login form
-    await page.getByRole('button', { name: /login|submit/i }).click();
+    await page.getByRole('button', { name: /Sign in|submit/i }).click();
 
     // Wait for successful login and redirection to dashboard
     await page.waitForURL(/\/dashboard/i);

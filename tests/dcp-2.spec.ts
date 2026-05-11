@@ -5,6 +5,7 @@ test.describe('DCP-2', () => {
     // Navigate to login page
     await page.goto('/login');
 
+
     // Enter valid credentials
     await page.getByRole('textbox', { name: /email/i }).fill(process.env.TEST_USER_EMAIL!);
     await page.getByRole('textbox', { name: /password/i }).fill(process.env.TEST_USER_PASSWORD!);

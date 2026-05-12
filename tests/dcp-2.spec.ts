@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('DCP-2', () => {
-  test('should login successfully with valid credentials and redirect to Account Dashboard', { tag: ['@functional', '@critical', '@login'] }, async ({ page }) => {
+  test('Login form submission with correct credentials — happy path', { tag: ['@functional', '@critical', '@login'] }, async ({ page }) => {
     // Navigate to login page
     await page.goto('/login');
 

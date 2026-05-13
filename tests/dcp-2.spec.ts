@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('DCP-2', () => {
-  test('Verify successful login with valid credentials redirects to Account Dashboard', { tag: ['@functional', '@critical', '@login'] }, async ({ page }) => {
+  test('should successfully login with valid credentials and redirect to Account Dashboard', { tag: ['@functional', '@critical', '@login'] }, async ({ page }) => {
     // Navigate to login page
     await page.goto('/login');
 
@@ -23,7 +23,7 @@ test.describe('DCP-2', () => {
     // TODO: Verify dashboard-specific elements are visible
   });
 
-  test('Verify Password field masking', { tag: '@security' }, async ({ page }) => {
+  test('should mask characters entered in password field', { tag: '@security' }, async ({ page }) => {
     // Navigate to login page
     await page.goto('/');
 
@@ -51,7 +51,7 @@ test.describe('DCP-2', () => {
     expect(fieldType).toBe('password');
   });
 
-  test('Verify error message for empty Email and Password fields', { tag: ['@functional', '@high-priority', '@validation'] }, async ({ page }) => {
+  test('should display error message when Email and Password fields are empty', { tag: ['@functional', '@high-priority', '@validation'] }, async ({ page }) => {
     // Navigate to login page
     await page.goto('/login'); // TODO: Replace with actual login page URL
     await page.waitForSelector('form'); // TODO: Replace with specific login form selector

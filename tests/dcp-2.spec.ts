@@ -17,7 +17,7 @@ test.describe('DCP-2', () => {
 
     // Additional verification that we're on the dashboard
     // TODO: Add specific dashboard element verification once dashboard page object is available
-    await expect(page).toHaveURL(/\/projectsInsteadofDashboard/i);
+    await expect(page).toHaveURL(/\/dashboard/i);
 
     // Verify user is logged in by checking for dashboard content
     // TODO: Verify dashboard-specific elements are visible
